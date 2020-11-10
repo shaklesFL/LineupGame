@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3254823814502930993
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3254823814502931006}
+  - component: {fileID: 8358182761122647940}
+  - component: {fileID: -7901817101858914643}
+  m_Layer: 0
+  m_Name: Witnesses
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3254823814502931006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254823814502930993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8358182761122647940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254823814502930993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03ea4d7303caa604ba9cc4b43c89e1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularHairStatements:
+  - I saw a [hairColour]-haired girl. She had [hairLength], [hairType] hair.
+  - I saw a [hairColour]-haired girl. She had disgusting [hairLength], [hairType]
+    hair.
+  regularClothesStatements:
+  - 
+  - 
+  regularBodyStatements:
+  - 
+  - 
+  regularFaceStatements:
+  - 
+  - 
+  elementList: {fileID: -7901817101858914643}
+  currentQueuedAnswer: 
+--- !u!114 &-7901817101858914643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254823814502930993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f0e445abda4d34098f05189434a988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elements:
+  - refName: hairLength
+    types:
+    - Short
+    - Medium Length
+    - Long
+  - refName: hairColour
+    types:
+    - Red
+    - Blue
+    - Brown
+  - refName: hairType
+    types:
+    - Straight
+    - Curly
+    - Bushy

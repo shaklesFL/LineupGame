@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2243613100121355732
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2243613100121355733}
+  - component: {fileID: 2243613100121355734}
+  m_Layer: 0
+  m_Name: ScreenManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2243613100121355733
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243613100121355732}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2243613100121355734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2243613100121355732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e12b97436f5f7424c8fb7915006ea4cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _areas:
+  - _areaObject: {fileID: 2704223353809171352, guid: 0eda900a96462de4f95427a82b1ccd7d, type: 3}
+    _areaName: Start
+    _isActive: 0
+  - _areaObject: {fileID: 2704223353809171352, guid: db82a21feaa5fa340a19a454a6cd1331, type: 3}
+    _areaName: Seed
+    _isActive: 0
+  - _areaObject: {fileID: 2704223353809171352, guid: 5410252cd1ec0734b80570e2d40ef7c7, type: 3}
+    _areaName: PlayerSelect
+    _isActive: 0
+  - _areaObject: {fileID: 7503308537176388438, guid: 646d6ef93bca9af489191f618b7eb611, type: 3}
+    _areaName: Questions
+    _isActive: 0
+  - _areaObject: {fileID: 7503308537176388438, guid: 2743849d63cfc5d4ea6aa3428463fccc, type: 3}
+    _areaName: Drawing
+    _isActive: 0
+  - _areaObject: {fileID: 7503308537176388438, guid: 4b72041991fd644418ccb3624fcf8690, type: 3}
+    _areaName: Witnesses
+    _isActive: 0
+  - _areaObject: {fileID: 7503308537176388438, guid: bf7df17119e658349bec986704c93893, type: 3}
+    _areaName: Answer
+    _isActive: 0
+  lastScreen: -1
+  _currentIndex: 0
