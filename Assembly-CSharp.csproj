@@ -52,18 +52,22 @@
     <UnityVersion>2020.1.6f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Engine.cs" />
-    <Compile Include="Assets\Scripts\Settings.cs" />
-    <Compile Include="Assets\Scripts\AreaIndex.cs" />
-    <Compile Include="Assets\Scripts\AreaAsset.cs" />
-    <Compile Include="Assets\Scripts\ButtonHandler.cs" />
-    <Compile Include="Assets\SeedInputHandler.cs" />
-    <Compile Include="Assets\QuestionHandler.cs" />
-    <Compile Include="Assets\WitnessHandler.cs" />
-    <Compile Include="Assets\WitnessEntity.cs" />
-    <Compile Include="Assets\ElementCreator.cs" />
-    <Compile Include="Assets\ElementBlock.cs" />
-    <Compile Include="Assets\AnswerHandler.cs" />
+    <Compile Include="Assets\Scripts\AreaFeatures\SeedInputHandler.cs" />
+    <Compile Include="Assets\Scripts\Drawing\Draw.cs" />
+    <Compile Include="Assets\Scripts\AreaBuilders\AreaIndex.cs" />
+    <Compile Include="Assets\Scripts\Witness\WitnessHandler.cs" />
+    <Compile Include="Assets\Scripts\AreaFeatures\ButtonHandler.cs" />
+    <Compile Include="Assets\Scripts\Elements\ElementCreator.cs" />
+    <Compile Include="Assets\Scripts\Elements\ElementBlock.cs" />
+    <Compile Include="Assets\Scripts\Answers\AnswerHandler.cs" />
+    <Compile Include="Assets\Scripts\Engine\Settings.cs" />
+    <Compile Include="Assets\Scripts\Witness\WitnessEntity.cs" />
+    <Compile Include="Assets\Scripts\Engine\Engine.cs" />
+    <Compile Include="Assets\Scripts\Answers\QuestionHandler.cs" />
+    <Compile Include="Assets\Scripts\AreaBuilders\AreaAsset.cs" />
+    <Compile Include="Assets\Scripts\AreaFeatures\WitnessScreen.cs" />
+    <Compile Include="Assets\Scripts\StatementCreator.cs" />
+    <Compile Include="Assets\Scripts\Engine\Case.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

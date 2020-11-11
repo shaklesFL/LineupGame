@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3254823814502931006}
   - component: {fileID: 8358182761122647940}
   - component: {fileID: -7901817101858914643}
+  - component: {fileID: 5640156702151429215}
   m_Layer: 0
   m_Name: Witnesses
   m_TagString: Untagged
@@ -44,20 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ea4d7303caa604ba9cc4b43c89e1f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regularHairStatements:
-  - I saw a [hairColour]-haired girl. She had [hairLength], [hairType] hair.
-  - I saw a [hairColour]-haired girl. She had disgusting [hairLength], [hairType]
-    hair.
-  regularClothesStatements:
-  - 
-  - 
-  regularBodyStatements:
-  - 
-  - 
-  regularFaceStatements:
-  - 
-  - 
   elementList: {fileID: -7901817101858914643}
+  statementList: {fileID: 5640156702151429215}
   currentQueuedAnswer: 
 --- !u!114 &-7901817101858914643
 MonoBehaviour:
@@ -87,3 +76,28 @@ MonoBehaviour:
     - Straight
     - Curly
     - Bushy
+--- !u!114 &5640156702151429215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3254823814502930993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b565ef309cc13b84bac91773a23528fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularHairStatements:
+  - I saw a [hairColour]-haired girl.She had [hairLength], [hairType] hair.
+  - When I went to go get some coffee, I saw a [hairColour]-haired girl.She had disgusting
+    [hairLength], [hairType] hair.
+  regularClothesStatements:
+  - 
+  - 
+  regularBodyStatements:
+  - 
+  - 
+  regularFaceStatements:
+  - 
+  - 
