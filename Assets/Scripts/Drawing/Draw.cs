@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using UnityEngine;
@@ -58,4 +58,4 @@ public class Draw : MonoBehaviour
         currentLineRenderer.SetPosition(positionIndex, pointPos);
     }
 
-}
+}*/

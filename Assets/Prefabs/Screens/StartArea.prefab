@@ -165,6 +165,7 @@ RectTransform:
   - {fileID: 4864099038402955832}
   - {fileID: 7525664479988489934}
   - {fileID: 3117758950661640547}
+  - {fileID: 1676543443554386703}
   m_Father: {fileID: 6292779869233914468}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -277,6 +278,95 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d77c836de235b4ca1e1539312f18bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  alien1: {fileID: 0}
+  alien2: {fileID: 0}
+  alien3: {fileID: 0}
+  alien4: {fileID: 0}
+--- !u!1 &4581516869152476147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1676543443554386703}
+  - component: {fileID: 726916228493611095}
+  - component: {fileID: 7610568678362977380}
+  m_Layer: 5
+  m_Name: Info (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1676543443554386703
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581516869152476147}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7601862004227499382}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.3283e-10, y: -62}
+  m_SizeDelta: {x: 500, y: 179.34189}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &726916228493611095
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581516869152476147}
+  m_CullTransparentMesh: 0
+--- !u!114 &7610568678362977380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581516869152476147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 100
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Your goal is to figure out who the <color=red>killer</color> is based
+    on <color=red>visual testimonies</color>.
+
+
+    You and your partner must deduce
+    which of the <color=red>visual elements</color> are true and which ones are false,
+    based on the <color=red>Truthfulness Meter </color>(patent pending)'
 --- !u!1 &7949369646623485012
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,8 +401,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.3283e-10, y: 22}
-  m_SizeDelta: {x: 700, y: 179.34189}
+  m_AnchoredPosition: {x: 2.3283e-10, y: 77}
+  m_SizeDelta: {x: 300, y: 179.34189}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6730319661175378086
 CanvasRenderer:
@@ -344,7 +434,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0

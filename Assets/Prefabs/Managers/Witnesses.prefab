@@ -69,7 +69,7 @@ MonoBehaviour:
     - Long
   - refName: hairColour
     types:
-    - Red
+    - Blond
     - Blue
     - Brown
   - refName: hairType
@@ -79,9 +79,9 @@ MonoBehaviour:
     - Bushy
   - refName: skinColour
     types:
-    - Red
+    - Orange
     - Green
-    - Blue
+    - Red
   - refName: height
     types:
     - Short
@@ -90,16 +90,14 @@ MonoBehaviour:
   - refName: mouthSize
     types:
     - Small
-    - Medium-Sized
     - Large
   - refName: noseSize
     types:
     - Small
-    - Medium-Sized
     - Large
   - refName: eyeColour
     types:
-    - Red
+    - Brown
     - Green
     - Blue
   - refName: glassesType
