@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\Engine\Case.cs" />
     <Compile Include="Assets\Scripts\Engine\Settings.cs" />
     <Compile Include="Assets\Scripts\Witness\WitnessEntity.cs" />
-    <Compile Include="Assets\Draw.cs" />
     <Compile Include="Assets\Scripts\Engine\Engine.cs" />
     <Compile Include="Assets\Scripts\Answers\QuestionHandler.cs" />
     <Compile Include="Assets\Scripts\AreaBuilders\AreaAsset.cs" />
