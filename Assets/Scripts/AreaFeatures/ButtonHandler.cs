@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class ButtonHandler : MonoBehaviour
 {
-  public void NextScreen()
+    public GameObject alien1;
+    public GameObject alien2;
+    public GameObject alien3;
+    public GameObject alien4;
+
+    public void NextScreen()
   {
     Engine.areaManager.GoToScreenIndex(Engine.areaManager.currentIndex);
   }
@@ -60,7 +65,8 @@ public class ButtonHandler : MonoBehaviour
   {
     Engine.areaManager.GoToScreen("Questions");
     Engine.witnessManager.currentWitnessId = id;
-    print(id);
+    print(id);       
+    
   }
 
   public void SelectSeed(string name)
