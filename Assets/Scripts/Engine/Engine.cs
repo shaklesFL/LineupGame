@@ -31,4 +31,12 @@ public class Engine : MonoBehaviour
     mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
   }
 
+  private void Update()
+  {
+    if(Input.GetKeyDown(KeyCode.L))
+    {
+      areaManager.GoToScreen("Suspects");
+    }
+  }
+
 }

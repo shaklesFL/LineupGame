@@ -62,6 +62,9 @@ MonoBehaviour:
   - _areaObject: {fileID: 7503308537176388438, guid: 4b72041991fd644418ccb3624fcf8690, type: 3}
     _areaName: Witnesses
     _isActive: 0
+  - _areaObject: {fileID: 7503308537176388438, guid: 899ebb5d2bee6674da8cc14b72b93870, type: 3}
+    _areaName: Suspects
+    _isActive: 0
   - _areaObject: {fileID: 7503308537176388438, guid: bf7df17119e658349bec986704c93893, type: 3}
     _areaName: Answer
     _isActive: 0

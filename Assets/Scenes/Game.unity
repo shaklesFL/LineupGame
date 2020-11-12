@@ -301,6 +301,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5712fd28ff462204ebbbb02f5a687cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killerId: 1
+  _randomNameList:
+  - Johnny
+  - Josephini
+  - Ramah
+  - Alex
+  - Jacob
+  - Benderton
+  - Jesus
+  - Squob
+  - Dank Hank
+  - Mr. Moist
+  - Harambo
+  - Doinib
+  - Biniod
+  - Sr. Slambo
+  - Object
+  - Rubberman
+  - Siobhan
+  - Ee no Cent
+  - Kee Ler
+  - Hello
+  - Child #2
+  pickedSuspect: 0
 --- !u!4 &1648502766
 Transform:
   m_ObjectHideFlags: 0

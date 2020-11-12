@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elementList: {fileID: -7901817101858914643}
   statementList: {fileID: 5640156702151429215}
+  currentWitnessId: 0
   currentQueuedAnswer: 
 --- !u!114 &-7901817101858914643
 MonoBehaviour:
@@ -76,6 +77,50 @@ MonoBehaviour:
     - Straight
     - Curly
     - Bushy
+  - refName: skinColour
+    types:
+    - Red
+    - Green
+    - Blue
+  - refName: height
+    types:
+    - Short
+    - Medium Height
+    - Tall
+  - refName: mouthSize
+    types:
+    - Small
+    - Medium-Sized
+    - Large
+  - refName: noseSize
+    types:
+    - Small
+    - Medium-Sized
+    - Large
+  - refName: eyeColour
+    types:
+    - Red
+    - Green
+    - Blue
+  - refName: glassesType
+    types:
+    - Sunglasses
+    - No Glasses
+    - Eyeglasses
+  - refName: shirtType
+    types:
+    - T-Shirt
+    - Sweater
+    - Tuxedo
+  - refName: shirtColour
+    types:
+    - Red
+    - Purple
+    - Blue
+  - refName: earringType
+    types:
+    - Earrings
+    - No Earrings
 --- !u!114 &5640156702151429215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,15 +134,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regularHairStatements:
-  - I saw a [hairColour]-haired girl.She had [hairLength], [hairType] hair.
-  - When I went to go get some coffee, I saw a [hairColour]-haired girl.She had disgusting
-    [hairLength], [hairType] hair.
+  - I saw a [hairColour]-haired person. They had [hairLength], [hairType] hair.
+  - When I went to go get some coffee, I saw a [hairColour]-haired person. They had
+    disgusting [hairLength], [hairType] hair.
+  - Yeah, that person definitely had [hairType] hair. I think it was [hairLength],
+    too.
+  - '[hairColour] hair. I always notice people with that. It''s my thing. [hairLength]
+    hair, too. It was quite luscious.'
+  - If I remember correctly, that person had [hairLength] [hairColour] hair that
+    was pretty [hairType].
   regularClothesStatements:
-  - 
-  - 
+  - 'I think that person was wearing a [shirtColour] [shirtType] and had [earringType].
+    Who knows. '
+  - Pretty sure the killer had [glassesType] and wore a [shirtType].
+  - Definitely was wearing a [shirtColour] [shirtType]. No doubt about it.
+  - 'It was as I expected. Only the worst kind of people wear [shirtColour] [shirtType]s. '
+  - '[earringType]? Yeah that sounds right. Oh, and also [glassesType]. Yeah, definitely.'
   regularBodyStatements:
-  - 
-  - 
+  - They were [height] and they were [skinColour]. That's also my favourite colour.
+  - They say someone's height is always the first impression. That [height] killer
+    is no different.
+  - '[skinColour] exomembrane was definitely in my peripheral.'
+  - They were [height] and [skinColour], if I can remember correctly.
   regularFaceStatements:
-  - 
-  - 
+  - I saw someone with a [mouthSize] mouth. They also had a [noseSize] nose. Serves
+    them right.
+  - Pretty sure that person had [eyeColour] eyes and a [noseSize] nose.
+  - Call me Einixitein, but I think they had a [mouthSize] mouth, and [eyeColour]
+    eyes.
+  - '[noseSize] nose? Check. [eyeColour] eyes? Check.'
+  - They definitely had [eyeColour] eyes. No question about it.

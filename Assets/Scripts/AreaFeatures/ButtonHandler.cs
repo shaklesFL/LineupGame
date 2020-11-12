@@ -27,10 +27,7 @@ public class ButtonHandler : MonoBehaviour
   public void SelectPlayerType(int type)
   {
     Engine.settings.SetPlayerType(type);
-    if (type==1)
-    {
-      Engine.caseManager.InitElements();
-    }
+    Engine.caseManager.InitElements();
   }
 
   public void QuestionOption1()
@@ -51,6 +48,12 @@ public class ButtonHandler : MonoBehaviour
   public void QuestionOption4()
   {
     Engine.areaManager.GoToScreen("Answer");
+  }
+
+  public void PickSuspect(int id)
+  {
+    Engine.caseManager.pickedSuspect = id;
+    GetComponent<SuspectScreen>().PickSuspect(id);
   }
 
 
