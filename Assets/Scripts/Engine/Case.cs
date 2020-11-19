@@ -38,7 +38,7 @@ public class Case : MonoBehaviour
     elementAnswers["eyeColour"] = 2;
     elementAnswers["glassesType"] = 2;
     elementAnswers["shirtType"] = 1;
-    elementAnswers["shirtColour"] = 2;
+    elementAnswers["shirtColour"] = 1;
     elementAnswers["earringType"] = 1;
 
     RandomizeKiller();
