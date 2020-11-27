@@ -19,7 +19,7 @@ public class QuestionHandler : MonoBehaviour
 
     for (int i=0;i<4;i++)
     {
-      if (Engine.witnessManager.witnesses[Engine.witnessManager.currentWitnessId].activeButtons[i]==false)
+      if (Engine.witnessManager._witnessList[Engine.witnessManager.currentWitnessId].entity.activeButtons[i]==false)
       {
         optionBtn[i].gameObject.GetComponent<Image>().color = Color.red;
       }
@@ -28,13 +28,13 @@ public class QuestionHandler : MonoBehaviour
 
   public void OptionClicked(int option)
   {
-    if (Engine.witnessManager.witnesses[Engine.witnessManager.currentWitnessId].activeButtons[option])
+    if (Engine.witnessManager._witnessList[Engine.witnessManager.currentWitnessId].entity.activeButtons[option])
     {
       if (Engine.settings.counterNumber >= 1)
       {
         Engine.areaManager.GoToScreen("Answer");
         Engine.witnessManager.UpdateSentence(option);
-        Engine.witnessManager.witnesses[Engine.witnessManager.currentWitnessId].activeButtons[option] = false;
+        Engine.witnessManager._witnessList[Engine.witnessManager.currentWitnessId].entity.activeButtons[option] = false;
       }
     }
   }

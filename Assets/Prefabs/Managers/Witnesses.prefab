@@ -49,6 +49,8 @@ MonoBehaviour:
   statementList: {fileID: 5640156702151429215}
   currentWitnessId: 0
   currentQueuedAnswer: 
+  _witnessList: []
+  characterObject: {fileID: 7745066022054691163, guid: e2cf1ad50eaddc94c801f70b6e2f2ac8, type: 3}
 --- !u!114 &-7901817101858914643
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 9d675e7cb1dbc2549bc6f457303c8e3d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 32
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Lokey
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 470d066bc721f704397d399cf05a1c2c, type: 3}
+  - {fileID: 12800000, guid: 00d30b5fe9213174982e56a0a8d3c47d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class ButtonHandler : MonoBehaviour
 {
-    public GameObject alien1;
-    public GameObject alien2;
-    public GameObject alien3;
-    public GameObject alien4;
+  public GameObject _witnessSlot;
 
-    public void NextScreen()
+  public void Start()
+  {
+    if (_witnessSlot != null)
+    {
+      Engine.witnessManager._witnessList[Engine.witnessManager.currentWitnessId].moveCharacterTo(_witnessSlot.transform.position, _witnessSlot.transform.localScale);
+    }
+  }
+
+  public void NextScreen()
   {
     Engine.areaManager.GoToScreenIndex(Engine.areaManager.currentIndex);
   }
@@ -68,8 +73,8 @@ public class ButtonHandler : MonoBehaviour
   {
     Engine.areaManager.GoToScreen("Questions");
     Engine.witnessManager.currentWitnessId = id;
-    print(id);       
-    
+    print(id);
+
   }
 
   public void SelectSeed(string name)

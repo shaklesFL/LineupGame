@@ -239,11 +239,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choosing the same seed will make it so that both of your initial crime
-    settings are the same!
+  m_text: Choosing the same ID will make it so that both of your killers are the
+    same!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: f5d76a528d282b945b9e68e6cfb02cbe, type: 2}
+  m_sharedMaterial: {fileID: 8467520787378183542, guid: f5d76a528d282b945b9e68e6cfb02cbe, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -476,6 +476,7 @@ GameObject:
   - component: {fileID: 4561337025502060670}
   - component: {fileID: 9061307312218554597}
   - component: {fileID: 1012095868597411515}
+  - component: {fileID: 4065015230314787035}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -596,6 +597,20 @@ MonoBehaviour:
           m_StringArgument: PlayerSelect
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &4065015230314787035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863737909510113508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90676d4f5799b16489c7f2a39daa9ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wobbleDistance: 0.5
+  wobbleSpeed: 0.07
 --- !u!1 &2473874967604118420
 GameObject:
   m_ObjectHideFlags: 0
@@ -746,10 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57d77c836de235b4ca1e1539312f18bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alien1: {fileID: 0}
-  alien2: {fileID: 0}
-  alien3: {fileID: 0}
-  alien4: {fileID: 0}
+  _witnessSlot: {fileID: 0}
 --- !u!114 &2199574932922636187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,7 +926,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 9d675e7cb1dbc2549bc6f457303c8e3d, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
@@ -926,7 +938,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter your shared seed!
+  m_Text: Come up with a shared case ID!
 --- !u!1 &5592642166551501326
 GameObject:
   m_ObjectHideFlags: 0
@@ -939,6 +951,7 @@ GameObject:
   - component: {fileID: 1748519004051352041}
   - component: {fileID: 1916002025745320864}
   - component: {fileID: 7122695830501414093}
+  - component: {fileID: 8197651014666422460}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -1059,6 +1072,20 @@ MonoBehaviour:
           m_StringArgument: Start
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8197651014666422460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592642166551501326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90676d4f5799b16489c7f2a39daa9ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wobbleDistance: 0.5
+  wobbleSpeed: 0.07
 --- !u!1 &6396650268183523223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1386,10 +1413,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 18
-    m_FontStyle: 1
-    m_BestFit: 0
+    m_Font: {fileID: 12800000, guid: 470d066bc721f704397d399cf05a1c2c, type: 3}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4
@@ -1465,10 +1492,10 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 470d066bc721f704397d399cf05a1c2c, type: 3}
     m_FontSize: 18
-    m_FontStyle: 1
-    m_BestFit: 0
+    m_FontStyle: 0
+    m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 4

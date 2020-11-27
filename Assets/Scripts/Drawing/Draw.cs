@@ -77,7 +77,7 @@ public class Draw : MonoBehaviour
     public void AddAPoint(Vector2 pointPos) {
         currentLineRenderer.positionCount++;
         int positionIndex = currentLineRenderer.positionCount - 1;
-        currentLineRenderer.SetPosition(positionIndex, pointPos);
+        currentLineRenderer.SetPosition(positionIndex, new Vector3(pointPos.x, pointPos.y, -1));
     }
 
     public void ChangeBlack()

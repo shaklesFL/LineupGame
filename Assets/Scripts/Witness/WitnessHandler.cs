@@ -14,22 +14,21 @@ public class WitnessHandler : MonoBehaviour
   public ElementCreator elementList;
   public StatementCreator statementList;
 
-  public WitnessEntity[] witnesses;
   public int currentWitnessId = 0;
 
   public string currentQueuedAnswer;
   public Confidence confidence;
 
+  public List<CharacterManager> _witnessList;
+  public GameObject characterObject;
+
   public void Start()
   {
-    witnesses = new WitnessEntity[4];
     confidence.part = 1;
     confidence.total = 1;
-    for (int i = 0; i < 4; i++)
-    {
-      witnesses[i] = new WitnessEntity();
-      witnesses[i].InitElements();
-    }
+
+    // Create witness objects
+    createWitnesses(4);
   }
 
   public void UpdateSentence(int button)
@@ -114,15 +113,28 @@ public class WitnessHandler : MonoBehaviour
         totalCount++;
 
         string victimString = "[" + el.refName + "]";
-        string killerString = "<color=red>" + el.types[typeIndex] + "</color>";
+        string killerString = "<color=red><u>" + el.types[typeIndex] + "</u></color>";
         sentence = sentence.Replace(victimString, killerString);
       }
     }
-    Engine.witnessManager.confidence.part = trueCount;
-    Engine.witnessManager.confidence.total = totalCount;
+    confidence.part = trueCount;
+    confidence.total = totalCount;
     Engine.settings.AddQuestionNumber(-1);
 
+    sentence = System.String.Format("\u201C{0}\"", sentence);
+
     return sentence;
+  }
+
+  public void createWitnesses(int witnessNumber)
+  {
+    _witnessList.Clear();
+    for (int i = 0; i < witnessNumber; i++)
+    {
+      GameObject ob = Instantiate(characterObject, Vector3.zero, Quaternion.identity);
+      ob.gameObject.transform.position += new Vector3(0, 0, 1);
+      _witnessList.Add(ob.GetComponent<CharacterManager>());
+    }
   }
 
 }

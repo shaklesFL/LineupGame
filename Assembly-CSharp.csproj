@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scripts\Engine\Engine.cs" />
     <Compile Include="Assets\Scripts\Answers\QuestionHandler.cs" />
     <Compile Include="Assets\Scripts\AreaBuilders\AreaAsset.cs" />
+    <Compile Include="Assets\Scripts\AreaFeatures\WobbleEffect.cs" />
+    <Compile Include="Assets\characterManager.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
