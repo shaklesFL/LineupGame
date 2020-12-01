@@ -64,63 +64,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elements:
+  - refName: body
+    types:
+    - name: Short
+      image: {fileID: 21300000, guid: bc541b02d7e77934b95300bbfca7bd62, type: 3}
+      colour: {r: 1, g: 1, b: 1, a: 1}
+      number: 0
+    - name: Tall
+      image: {fileID: 21300000, guid: 0dc4ef4a718b30948afb30e1a9241226, type: 3}
+      colour: {r: 1, g: 1, b: 1, a: 1}
+      number: 0
+    isColour: 0
+    isHeight: 0
+    _partType: 0
   - refName: hairLength
     types:
-    - Short
-    - Medium Length
-    - Long
+    - name: Short
+      image: {fileID: 21300000, guid: 0dc4ef4a718b30948afb30e1a9241226, type: 3}
+      colour: {r: 1, g: 1, b: 1, a: 1}
+      number: 0
+    - name: Long
+      image: {fileID: 21300000, guid: bc541b02d7e77934b95300bbfca7bd62, type: 3}
+      colour: {r: 1, g: 1, b: 1, a: 1}
+      number: 0
+    isColour: 0
+    isHeight: 0
+    _partType: 5
   - refName: hairColour
     types:
-    - Blond
-    - Blue
-    - Brown
-  - refName: hairType
+    - name: Red
+      image: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+      colour: {r: 1, g: 0, b: 0, a: 1}
+      number: 0
+    - name: Brown
+      image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+      colour: {r: 0.4339623, g: 0.20038748, b: 0, a: 1}
+      number: 0
+    isColour: 1
+    isHeight: 0
+    _partType: 5
+  - refName: bodyColour
     types:
-    - Straight
-    - Curly
-    - Bushy
-  - refName: skinColour
+    - name: Red
+      image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+      colour: {r: 0.020272732, g: 1, b: 0, a: 1}
+      number: 0
+    - name: Brown
+      image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      colour: {r: 0, g: 0.021962643, b: 1, a: 1}
+      number: 0
+    isColour: 1
+    isHeight: 0
+    _partType: 0
+  - refName: bodyHeight
     types:
-    - Orange
-    - Green
-    - Red
-  - refName: height
-    types:
-    - Short
-    - Medium Height
-    - Tall
-  - refName: mouthSize
-    types:
-    - Small
-    - Large
-  - refName: noseSize
-    types:
-    - Small
-    - Large
-  - refName: eyeColour
-    types:
-    - Brown
-    - Green
-    - Blue
-  - refName: glassesType
-    types:
-    - Sunglasses
-    - No Glasses
-    - Eyeglasses
-  - refName: shirtType
-    types:
-    - T-Shirt
-    - Sweater
-    - Tuxedo
-  - refName: shirtColour
-    types:
-    - Red
-    - Purple
-    - Blue
-  - refName: earringType
-    types:
-    - Earrings
-    - No Earrings
+    - name: Tall
+      image: {fileID: 0}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 1.5
+    - name: Short
+      image: {fileID: 0}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0.5
+    isColour: 0
+    isHeight: 1
+    _partType: 0
 --- !u!114 &5640156702151429215
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,8 +20,10 @@ public class SuspectScreen : MonoBehaviour
 
 
 
-  private void Start()
+  private void OnEnable()
   {
+    suspectObjects[Engine.caseManager.killerId].gameObject.GetComponentInChildren<CharacterManager>().isKiller = true;
+
     resultText.text = "";
     for (int i = 0; i < suspectNames.Length; i++)
     {

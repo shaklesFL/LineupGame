@@ -73,7 +73,7 @@ public class ButtonHandler : MonoBehaviour
   {
     Engine.areaManager.GoToScreen("Questions");
     Engine.witnessManager.currentWitnessId = id;
-    print(id);
+    //print(id);
 
   }
 

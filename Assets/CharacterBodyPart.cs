@@ -3,20 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class ElementBlock
+public class CharacterBodyPart
 {
-  [Header("----------- ELEMENT -----------")]
-  public string refName;
-  [Space]
-  public ElementType[] types;
-  [Space]
-  public bool isColour;
-  public bool isHeight;
+  public string _partName;
+  public GameObject _bodyPoint;
   [SerializeField]
   private BodyFeatures _partType;
   [HideInInspector]
-  public int featureType
+  public int _partId
   {
     get { return (int)_partType; }
   }
+
 }

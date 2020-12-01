@@ -2,6 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum BodyFeatures // your custom enumeration
+{
+  Base,
+  Spots,
+  Eyes,
+  Nose,
+  Mouth,
+  Hair,
+  HairLength
+};
+
 public class Engine : MonoBehaviour
 {
 

@@ -28,7 +28,7 @@ public class Case : MonoBehaviour
       elementAnswers.Add(Engine.witnessManager.elementList.elements[i].refName, seenElementId);
     }
 
-    elementAnswers["hairLength"] = 2;
+    /*elementAnswers["hairLength"] = 2;
     elementAnswers["hairColour"] = 0;
     elementAnswers["hairType"] = 0;
     elementAnswers["skinColour"] = 0;
@@ -39,7 +39,7 @@ public class Case : MonoBehaviour
     elementAnswers["glassesType"] = 2;
     elementAnswers["shirtType"] = 1;
     elementAnswers["shirtColour"] = 1;
-    elementAnswers["earringType"] = 1;
+    elementAnswers["earringType"] = 1;*/
 
     RandomizeKiller();
   }
@@ -55,7 +55,7 @@ public class Case : MonoBehaviour
 
     // Randomize killer position
     killerId = Random.Range(0, 5);
-    killerId = 1;
+    //killerId = 1;
 
     // Make pool of name ids, they'll be reduced to only unpicked ones.
     List<int> freeNames = new List<int>();
@@ -71,8 +71,8 @@ public class Case : MonoBehaviour
       int poolId = Random.Range(0, freeNames.Count);
       int pickedId = freeNames[poolId];
 
-      print("Pool Id: " + poolId);
-      print("Picked Id: " + pickedId);
+      //print("Pool Id: " + poolId);
+      //print("Picked Id: " + pickedId);
 
       suspectNames[i] = _randomNameList[pickedId];
 

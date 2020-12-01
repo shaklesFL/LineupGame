@@ -33,7 +33,6 @@ public class WitnessHandler : MonoBehaviour
 
   public void UpdateSentence(int button)
   {
-    print(button);
     switch (button)
     {
       case 0:
@@ -98,8 +97,10 @@ public class WitnessHandler : MonoBehaviour
     int trueCount = 0;
     int totalCount = 0;
     // go through each element in sentence and replace the keywords associated with them
-    foreach (var el in elementList.elementList.Values)
+    foreach (int id in elementList.elementList.Values)
     {
+      ElementBlock el = elementList.elements[id];
+
       if (sentence.Contains(el.refName))
       {
         int typeIndex = Random.Range(0, el.types.Length);
@@ -107,13 +108,13 @@ public class WitnessHandler : MonoBehaviour
         // Check to see if true
         if (isElementTrue(el.refName, typeIndex))
         {
-          print("Truth: " + el.types[typeIndex]);
+          //print("Truth: " + el.types[typeIndex]);
           trueCount++;
         }
         totalCount++;
 
         string victimString = "[" + el.refName + "]";
-        string killerString = "<color=red><u>" + el.types[typeIndex] + "</u></color>";
+        string killerString = "<color=red><u>" + el.types[typeIndex].name + "</u></color>";
         sentence = sentence.Replace(victimString, killerString);
       }
     }
@@ -137,4 +138,29 @@ public class WitnessHandler : MonoBehaviour
     }
   }
 
+  public ElementBlock GetElementBlockFromRef(string refName)
+  {
+    if (elementList.elementList.ContainsKey(refName))
+    {
+      int id = elementList.elementList[refName];
+      ElementBlock el = elementList.elements[id];
+      return el;
+    }
+    else
+      return null;
+  }
+
+  public ElementBlock GetElementBlockFromType(int type)
+  {
+    print(type);
+    if (elementList.elementIdList.ContainsKey(type))
+    {
+      int id = elementList.elementIdList[type];
+      ElementBlock el = elementList.elements[id];
+      print(id);
+      return el;
+    }
+    else
+      return null;
+  }
 }
