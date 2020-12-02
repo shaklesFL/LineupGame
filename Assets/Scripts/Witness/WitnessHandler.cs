@@ -97,12 +97,14 @@ public class WitnessHandler : MonoBehaviour
     int trueCount = 0;
     int totalCount = 0;
     // go through each element in sentence and replace the keywords associated with them
-    foreach (int id in elementList.elementList.Values)
+    foreach (int id in elementList.allElementsList.Values)
     {
       ElementBlock el = elementList.elements[id];
-
+      print(el.refName);
+      print(elementList.allElementsList.Count);
       if (sentence.Contains(el.refName))
       {
+        print("HIT");
         int typeIndex = Random.Range(0, el.types.Length);
 
         // Check to see if true
@@ -140,9 +142,9 @@ public class WitnessHandler : MonoBehaviour
 
   public ElementBlock GetElementBlockFromRef(string refName)
   {
-    if (elementList.elementList.ContainsKey(refName))
+    if (elementList.allElementsList.ContainsKey(refName))
     {
-      int id = elementList.elementList[refName];
+      int id = elementList.allElementsList[refName];
       ElementBlock el = elementList.elements[id];
       return el;
     }
@@ -153,14 +155,22 @@ public class WitnessHandler : MonoBehaviour
   public ElementBlock GetElementBlockFromType(int type)
   {
     print(type);
-    if (elementList.elementIdList.ContainsKey(type))
+    if (elementList.allElementsIdList.ContainsKey(type))
     {
-      int id = elementList.elementIdList[type];
+      int id = elementList.allElementsIdList[type];
       ElementBlock el = elementList.elements[id];
       print(id);
       return el;
     }
     else
       return null;
+  }
+
+  public void DeleteWitnesses()
+  {
+    foreach(CharacterManager cha in _witnessList)
+    {
+      Destroy(cha.gameObject);
+    }
   }
 }

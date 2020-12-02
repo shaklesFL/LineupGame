@@ -5,12 +5,13 @@ using UnityEngine;
 public enum BodyFeatures // your custom enumeration
 {
   Base,
-  Spots,
+  Clothing,
   Eyes,
   Nose,
   Mouth,
   Hair,
-  HairLength
+  Earrings,
+  Glasses
 };
 
 public class Engine : MonoBehaviour

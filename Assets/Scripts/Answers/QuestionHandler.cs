@@ -7,10 +7,13 @@ using UnityEngine;
 public class QuestionHandler : MonoBehaviour
 {
   public Button[] optionBtn;
+  public TextMeshProUGUI nameText;
 
   // Start is called before the first frame update
   void Start()
   {
+    nameText.SetText("What would you like <color=red>"+Engine.caseManager.witnessNames[Engine.witnessManager.currentWitnessId]+"</color> to describe?");
+
     // Apprently you can't put this in a for loop... dope.
     optionBtn[0].onClick.AddListener(delegate { OptionClicked(0); });
     optionBtn[1].onClick.AddListener(delegate { OptionClicked(1); });

@@ -64,14 +64,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elements:
-  - refName: body
+  - refName: bodyBase
     types:
-    - name: Short
-      image: {fileID: 21300000, guid: bc541b02d7e77934b95300bbfca7bd62, type: 3}
-      colour: {r: 1, g: 1, b: 1, a: 1}
-      number: 0
-    - name: Tall
-      image: {fileID: 21300000, guid: 0dc4ef4a718b30948afb30e1a9241226, type: 3}
+    - name: Body
+      image: {fileID: 21300000, guid: aae26811852b392468e6d8bb23404117, type: 3}
       colour: {r: 1, g: 1, b: 1, a: 1}
       number: 0
     isColour: 0
@@ -80,11 +76,15 @@ MonoBehaviour:
   - refName: hairLength
     types:
     - name: Short
-      image: {fileID: 21300000, guid: 0dc4ef4a718b30948afb30e1a9241226, type: 3}
+      image: {fileID: 21300000, guid: ff939f81ae40c8e42be14ffe08858a8e, type: 3}
+      colour: {r: 1, g: 1, b: 1, a: 1}
+      number: 0
+    - name: Medium-Length
+      image: {fileID: 21300000, guid: b0e5e9ee4e90bd14bb51ba67fb806257, type: 3}
       colour: {r: 1, g: 1, b: 1, a: 1}
       number: 0
     - name: Long
-      image: {fileID: 21300000, guid: bc541b02d7e77934b95300bbfca7bd62, type: 3}
+      image: {fileID: 21300000, guid: a66b3b101c3efe14380e543bc95c1491, type: 3}
       colour: {r: 1, g: 1, b: 1, a: 1}
       number: 0
     isColour: 0
@@ -92,43 +92,171 @@ MonoBehaviour:
     _partType: 5
   - refName: hairColour
     types:
-    - name: Red
+    - name: Blond
       image: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-      colour: {r: 1, g: 0, b: 0, a: 1}
+      colour: {r: 1, g: 0.8025769, b: 0.2216981, a: 1}
       number: 0
     - name: Brown
       image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
       colour: {r: 0.4339623, g: 0.20038748, b: 0, a: 1}
       number: 0
+    - name: Blue
+      image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+      colour: {r: 0.10849059, g: 0.2053707, b: 1, a: 1}
+      number: 0
+    - name: Black
+      image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+      colour: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
+      number: 0
     isColour: 1
     isHeight: 0
     _partType: 5
-  - refName: bodyColour
+  - refName: skinColour
     types:
-    - name: Red
+    - name: Green
       image: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-      colour: {r: 0.020272732, g: 1, b: 0, a: 1}
+      colour: {r: 0.37765458, g: 0.6037736, b: 0.3730865, a: 1}
       number: 0
-    - name: Brown
+    - name: Blue
       image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-      colour: {r: 0, g: 0.021962643, b: 1, a: 1}
+      colour: {r: 0.40939838, g: 0.4684426, b: 0.754717, a: 1}
+      number: 0
+    - name: Red
+      image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      colour: {r: 0.8301887, g: 0.266287, b: 0.23104309, a: 1}
       number: 0
     isColour: 1
     isHeight: 0
     _partType: 0
-  - refName: bodyHeight
+  - refName: height
     types:
     - name: Tall
       image: {fileID: 0}
       colour: {r: 0, g: 0, b: 0, a: 1}
-      number: 1.5
+      number: 1.2
     - name: Short
       image: {fileID: 0}
       colour: {r: 0, g: 0, b: 0, a: 1}
-      number: 0.5
+      number: 0.8
     isColour: 0
     isHeight: 1
     _partType: 0
+  - refName: shirtType
+    types:
+    - name: Sweater
+      image: {fileID: 21300000, guid: 19c00576a1f3ce84d870e378718b63d0, type: 3}
+      colour: {r: 1, g: 1, b: 1, a: 1}
+      number: 0
+    - name: T-Shirt
+      image: {fileID: 21300000, guid: 6e6f1b2ad50e9af4fae9d403f07db73d, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0
+    - name: Tuxedo
+      image: {fileID: 21300000, guid: 73a5f44ebc96c5845b863c84e97f8ac3, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0
+    isColour: 0
+    isHeight: 0
+    _partType: 1
+  - refName: shirtColour
+    types:
+    - name: Purple
+      image: {fileID: 0}
+      colour: {r: 0.53409004, g: 0, b: 1, a: 1}
+      number: 0
+    - name: Black
+      image: {fileID: 0}
+      colour: {r: 0.16037738, g: 0.16037738, b: 0.16037738, a: 1}
+      number: 0.8
+    - name: Red
+      image: {fileID: 0}
+      colour: {r: 1, g: 0, b: 0, a: 1}
+      number: 0.8
+    isColour: 1
+    isHeight: 0
+    _partType: 1
+  - refName: earringType
+    types:
+    - name: Earrings
+      image: {fileID: 21300000, guid: 96c3d667ba13e4743a2e225f632d578c, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 1.2
+    - name: No Earrings
+      image: {fileID: 0}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0
+    isColour: 0
+    isHeight: 0
+    _partType: 6
+  - refName: glassesType
+    types:
+    - name: No Glasses
+      image: {fileID: 0}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0
+    - name: Sunglasses
+      image: {fileID: 21300000, guid: daa3011ab6de6434a9d8f053fd517d15, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0
+    - name: Reading Glasses
+      image: {fileID: 21300000, guid: f22459800034a964d8dccae38f87c6f7, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0
+    isColour: 0
+    isHeight: 0
+    _partType: 7
+  - refName: noseSize
+    types:
+    - name: Big
+      image: {fileID: 21300000, guid: 3dcde9db0b405954ab9165523367ca59, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 1
+    - name: Small
+      image: {fileID: 21300000, guid: 7bb144eb97753fd4db9393b55bea13da, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0
+    isColour: 0
+    isHeight: 0
+    _partType: 3
+  - refName: mouthSize
+    types:
+    - name: Big
+      image: {fileID: 21300000, guid: cefa1e6aaa405604faf37fbad2c89f27, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 1
+    - name: Small
+      image: {fileID: 21300000, guid: abb134dc65c346a4f886c83dc063003e, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 0
+    isColour: 0
+    isHeight: 0
+    _partType: 4
+  - refName: eyeBase
+    types:
+    - name: Regular
+      image: {fileID: 21300000, guid: 7d0238b7454929e469597b91a359b3a3, type: 3}
+      colour: {r: 0, g: 0, b: 0, a: 1}
+      number: 1
+    isColour: 0
+    isHeight: 0
+    _partType: 2
+  - refName: eyeColour
+    types:
+    - name: Red
+      image: {fileID: 21300000, guid: 7d0238b7454929e469597b91a359b3a3, type: 3}
+      colour: {r: 1, g: 0, b: 0, a: 1}
+      number: 1
+    - name: Blue
+      image: {fileID: 21300000, guid: 7d0238b7454929e469597b91a359b3a3, type: 3}
+      colour: {r: 0, g: 0.083200455, b: 1, a: 1}
+      number: 1
+    - name: White
+      image: {fileID: 21300000, guid: 7d0238b7454929e469597b91a359b3a3, type: 3}
+      colour: {r: 1, g: 1, b: 1, a: 1}
+      number: 1
+    isColour: 1
+    isHeight: 0
+    _partType: 2
 --- !u!114 &5640156702151429215
 MonoBehaviour:
   m_ObjectHideFlags: 0

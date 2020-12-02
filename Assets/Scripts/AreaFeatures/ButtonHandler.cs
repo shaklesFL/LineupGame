@@ -24,6 +24,11 @@ public class ButtonHandler : MonoBehaviour
     Engine.areaManager.GoToScreen(name);
   }
 
+  public void RemoveWitnesses()
+  {
+    Engine.witnessManager.DeleteWitnesses();
+  }
+
   public void GoBackToWitness()
   {
     //Engine.areaManager.GoToScreen(name);

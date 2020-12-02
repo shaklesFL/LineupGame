@@ -6,6 +6,12 @@ public class ElementCreator : MonoBehaviour
 {
   public ElementBlock[] elements;
 
+  public Dictionary<string, int> allElementsList =
+    new Dictionary<string, int>();
+
+  public Dictionary<int, int> allElementsIdList =
+    new Dictionary<int, int>();
+
   public Dictionary<string, int> elementList =
     new Dictionary<string, int>();
 
@@ -21,6 +27,8 @@ public class ElementCreator : MonoBehaviour
     // Add all of the references into dictionaries for easy reference
     for (int i = 0; i < elements.Length; i++)
     {
+      allElementsList.Add(elements[i].refName, i);
+
       if (!elements[i].isColour && !elements[i].isHeight)
       {
         elementList.Add(elements[i].refName, i);

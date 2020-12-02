@@ -346,28 +346,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killerId: 1
   suspectNames: []
-  _randomNameList:
-  - Johnny
-  - Josephini
+  _randomSuspectNameList:
+  - Sr. Slambo
+  - Jacob
   - Ramah
   - Alex
-  - Jacob
-  - Benderton
-  - Jesus
-  - Squob
-  - Dank Hank
-  - Mr. Moist
-  - Harambo
-  - Doinib
-  - Biniod
-  - Sr. Slambo
-  - Object
-  - Rubberman
-  - Siobhan
-  - Ee no Cent
-  - Kee Ler
-  - Hello
-  - Child #2
+  - Keeler
+  - Johnny
+  - Crumpo
+  - Blobby Bob
+  - Celine Dijon
+  - Crunk
+  - Squeejo
+  - Ramble Rob
+  - Dunking Doblut
+  - Bonker Don
+  - Dork
+  - Plobo
+  - Moist-Man
+  - Rubber-Boy
+  - Bye-Bye-Boyo
+  - Stop
+  - Dunking Darius
+  - Ear-Licker
+  - 'Sandwich '
+  - Brownie
+  - No
+  witnessNames: []
+  _randomWitnessNameList:
+  - Blubber
+  - Rubber
+  - Dubber
+  - Joli
+  - Club
+  - Mark
+  - Rango
+  - Morky
+  - Donger
+  - Dorker
   pickedSuspect: 0
 --- !u!4 &1648502766
 Transform:
@@ -414,7 +430,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _seed: 
   _playerType: 0
-  _counterNumber: 10
+  _counterNumber: 8
 --- !u!4 &1818090474
 Transform:
   m_ObjectHideFlags: 0
