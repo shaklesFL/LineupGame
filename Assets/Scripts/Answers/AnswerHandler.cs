@@ -21,6 +21,6 @@ public class AnswerHandler : MonoBehaviour
 
   public void SetConfidence(int correct, int total)
   {
-    confidence.text = "<color=blue>" + correct + " of the " + total + "</color> " + "<color=red>statements</color>" + " are correct.";
+    confidence.text = "<color=blue>" + correct + " of " + total + "</color> " + "<color=red>statements</color>" + " are correct.";
   }
 }

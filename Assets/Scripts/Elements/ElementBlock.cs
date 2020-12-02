@@ -12,6 +12,7 @@ public class ElementBlock
   [Space]
   public bool isColour;
   public bool isHeight;
+  public bool isMatrix;
   [SerializeField]
   private BodyFeatures _partType;
   [HideInInspector]

@@ -9,6 +9,7 @@ public class SuspectScreen : MonoBehaviour
   public TextMeshProUGUI[] suspectNames;
 
   public SuspectEntity[] suspectObjects;
+  public GameObject restartButton;
 
   private int[] notSelectedSuspects;
   private int chosenSuspect;
@@ -22,6 +23,26 @@ public class SuspectScreen : MonoBehaviour
 
   private void OnEnable()
   {
+    restartButton.SetActive(false);
+
+    if (Engine.settings.playerType == 1)
+    {
+      for (int i = Mathf.CeilToInt(suspectObjects.Length / 2)+1; i < suspectObjects.Length; i++)
+      {
+        suspectObjects[i].isActive = false;
+        suspectObjects[i].gameObject.GetComponentInChildren<CharacterManager>().SetDarkened(true);
+      }
+    }
+    else
+    {
+      for (int i = 0; i < Mathf.CeilToInt(suspectObjects.Length / 2)+1; i++)
+      {
+        suspectObjects[i].isActive = false;
+        suspectObjects[i].gameObject.GetComponentInChildren<CharacterManager>().SetDarkened(true);
+      }
+    }
+
+
     suspectObjects[Engine.caseManager.killerId].gameObject.GetComponentInChildren<CharacterManager>().isKiller = true;
 
     resultText.text = "";
@@ -45,12 +66,15 @@ public class SuspectScreen : MonoBehaviour
       revealState = 2;
     }
     // Wait... then reveal killer
-    if (revealState==2)
+    if (revealState == 2)
     {
-      anticipCounter -= 1*Time.deltaTime*60f;
-      if (anticipCounter<=0)
+      anticipCounter -= 1 * Time.deltaTime * 60f;
+      if (anticipCounter <= 0)
       {
         suspectObjects[Engine.caseManager.killerId].heightDif = 0;
+        suspectObjects[Engine.caseManager.killerId].gameObject.GetComponentInChildren<CharacterManager>().SetDarkened(false);
+        suspectNames[Engine.caseManager.killerId].color = Color.red;
+        restartButton.SetActive(true);
 
         SetResultText(Engine.caseManager.killerId == chosenSuspect);
 
@@ -61,6 +85,7 @@ public class SuspectScreen : MonoBehaviour
 
   public void PickSuspect(int id)
   {
+
     // Get list of not selected suspects
     int notSelectedCounter = 0;
     for (int i = 0; i < suspectObjects.Length; i++)

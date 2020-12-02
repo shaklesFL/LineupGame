@@ -35,7 +35,7 @@ public class CharacterFeatures
             typeId = Engine.caseManager.elementAnswers[Engine.witnessManager.elementList.elements[j].refName];
           }
 
-          if (!Engine.witnessManager.elementList.elements[j].isColour && !Engine.witnessManager.elementList.elements[j].isHeight)
+          if (!Engine.witnessManager.elementList.elements[j].isColour && !Engine.witnessManager.elementList.elements[j].isHeight && !Engine.witnessManager.elementList.elements[j].isMatrix)
           {
             Debug.Log("TypeID: " + typeId);
             el.elementIndex = j;
@@ -44,12 +44,14 @@ public class CharacterFeatures
           if (Engine.witnessManager.elementList.elements[j].isColour)
           {
             el.color = Engine.witnessManager.elementList.elements[j].types[typeId].colour;
-            Debug.Log("Colour: " + el.color);
           }
           if (Engine.witnessManager.elementList.elements[j].isHeight)
           {
             el.height = Engine.witnessManager.elementList.elements[j].types[typeId].number;
-            Debug.Log("Height: " + el.height);
+          }
+          if (Engine.witnessManager.elementList.elements[j].isMatrix)
+          {
+            el.matrixIndex = (int)Engine.witnessManager.elementList.elements[j].types[typeId].number;
           }
         }
       }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement; 
 using UnityEngine;
 
 public class ButtonHandler : MonoBehaviour
@@ -69,6 +70,11 @@ public class ButtonHandler : MonoBehaviour
   {
     Engine.caseManager.pickedSuspect = id;
     GetComponent<SuspectScreen>().PickSuspect(id);
+  }
+
+  public void RestartGame()
+  {
+    SceneManager.LoadScene("Game");
   }
 
 

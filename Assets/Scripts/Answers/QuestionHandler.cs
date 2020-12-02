@@ -8,10 +8,13 @@ public class QuestionHandler : MonoBehaviour
 {
   public Button[] optionBtn;
   public TextMeshProUGUI nameText;
+  public TextMeshProUGUI counterText;
 
   // Start is called before the first frame update
   void Start()
   {
+    counterText.text = Engine.settings.counterNumber.ToString();
+
     nameText.SetText("What would you like <color=red>"+Engine.caseManager.witnessNames[Engine.witnessManager.currentWitnessId]+"</color> to describe?");
 
     // Apprently you can't put this in a for loop... dope.

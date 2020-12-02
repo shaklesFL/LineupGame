@@ -29,7 +29,7 @@ public class ElementCreator : MonoBehaviour
     {
       allElementsList.Add(elements[i].refName, i);
 
-      if (!elements[i].isColour && !elements[i].isHeight)
+      if (!elements[i].isColour && !elements[i].isHeight && !elements[i].isMatrix)
       {
         elementList.Add(elements[i].refName, i);
         elementIdList.Add(elements[i].featureType, i);

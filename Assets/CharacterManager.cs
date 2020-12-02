@@ -18,6 +18,12 @@ public class CharacterManager : MonoBehaviour
   Vector3 velocity2 = Vector3.zero;
   public float smoothTime = 0.5f;
 
+  public bool darkened = false;
+
+  [SerializeField]
+  private GameObject characterObject;
+  [SerializeField]
+  private GameObject darkenedObject;
 
   // Start is called before the first frame update
   void Start()
@@ -68,11 +74,28 @@ public class CharacterManager : MonoBehaviour
 
       print(block.refName);
       SpriteRenderer render = point.GetComponent<SpriteRenderer>();
-      render.sprite = block.types[bodyElement.typeIndex].image;
+      print("MAtrix: " +bodyElement.matrixIndex);
+      render.sprite = block.types[bodyElement.typeIndex].images[bodyElement.matrixIndex];
       render.color = bodyElement.color;
       Vector3 scale = render.gameObject.transform.localScale;
       render.gameObject.transform.localScale = new Vector3(scale.x, scale.y * bodyElement.height, scale.z);
 
+    }
+  }
+
+  public void SetDarkened(bool dark)
+  {
+    darkened = dark;
+
+    if (dark)
+    {
+      characterObject.SetActive(false);
+      darkenedObject.SetActive(true);
+    }
+    else
+    {
+      characterObject.SetActive(true);
+      darkenedObject.SetActive(false);
     }
   }
 }
