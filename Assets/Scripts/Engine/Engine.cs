@@ -37,6 +37,8 @@ public class Engine : MonoBehaviour
     settings = settingsEntity;
     caseManager = caseManagerEntity;
 
+    FindObjectOfType<AudioManager>().Play("theme");
+
     areaManager = Instantiate(screenManagerEntity).GetComponent<AreaIndex>();
     witnessManager = Instantiate(witnessHandlerEntity).GetComponent<WitnessHandler>();
 
