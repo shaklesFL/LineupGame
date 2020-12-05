@@ -68,8 +68,11 @@ public class ButtonHandler : MonoBehaviour
 
   public void PickSuspect(int id)
   {
-    Engine.caseManager.pickedSuspect = id;
-    GetComponent<SuspectScreen>().PickSuspect(id);
+    if (!GetComponent<SuspectScreen>().HasPickedSuspect())
+    {
+      Engine.caseManager.pickedSuspect = id;
+      GetComponent<SuspectScreen>().PickSuspect(id);
+    }
   }
 
   public void RestartGame()

@@ -12,7 +12,7 @@ public class SuspectScreen : MonoBehaviour
   public GameObject restartButton;
 
   private int[] notSelectedSuspects;
-  private int chosenSuspect;
+  private int chosenSuspect = -1;
 
   private int revealState = 0;
   private float anticipCounter;
@@ -111,5 +111,11 @@ public class SuspectScreen : MonoBehaviour
       resultText.text = "<color=red>THE KILLER ROAMS FREE!</color>";
     }
   }
+
+  public bool HasPickedSuspect()
+  {
+    return (chosenSuspect == -1 ? false : true);
+  }
+
 
 }

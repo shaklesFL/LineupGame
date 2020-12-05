@@ -94,8 +94,12 @@ public class WitnessHandler : MonoBehaviour
 
   string FormSentence(string sentence)
   {
+    int chanceOfTruth = 20;
+    // Chance of having full struth instead of random pick
+
     int trueCount = 0;
     int totalCount = 0;
+
     // go through each element in sentence and replace the keywords associated with them
     foreach (int id in elementList.allElementsList.Values)
     {
@@ -105,7 +109,16 @@ public class WitnessHandler : MonoBehaviour
       if (sentence.Contains(el.refName))
       {
         print("HIT");
-        int typeIndex = Random.Range(0, el.types.Length);
+        int typeIndex = 0;
+
+        // Only gives full correct answer if there's only been less than 2 correct so far
+        if (Random.Range(0, 100) <= chanceOfTruth && trueCount<=1)
+        {
+          typeIndex = Engine.caseManager.elementAnswers[el.refName];
+        }
+        else { 
+          typeIndex = Random.Range(0, el.types.Length);
+        }
 
         // Check to see if true
         if (isElementTrue(el.refName, typeIndex))
@@ -168,7 +181,7 @@ public class WitnessHandler : MonoBehaviour
 
   public void DeleteWitnesses()
   {
-    foreach(CharacterManager cha in _witnessList)
+    foreach (CharacterManager cha in _witnessList)
     {
       Destroy(cha.gameObject);
     }
