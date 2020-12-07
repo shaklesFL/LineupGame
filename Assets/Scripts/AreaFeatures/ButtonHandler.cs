@@ -22,6 +22,7 @@ public class ButtonHandler : MonoBehaviour
 
   public void GoToScreen(string name)
   {
+    Engine.audioManager.Play("select");
     Engine.areaManager.GoToScreen(name);
   }
 
@@ -70,6 +71,7 @@ public class ButtonHandler : MonoBehaviour
   {
     if (!GetComponent<SuspectScreen>().HasPickedSuspect())
     {
+      Engine.audioManager.Play("select");
       Engine.caseManager.pickedSuspect = id;
       GetComponent<SuspectScreen>().PickSuspect(id);
     }
@@ -85,6 +87,7 @@ public class ButtonHandler : MonoBehaviour
 
   public void Witness(int id)
   {
+    Engine.audioManager.Play("select");
     Engine.areaManager.GoToScreen("Questions");
     Engine.witnessManager.currentWitnessId = id;
     //print(id);
@@ -93,6 +96,7 @@ public class ButtonHandler : MonoBehaviour
 
   public void SelectSeed(string name)
   {
+    Engine.audioManager.Play("select");
     Engine.settings.SetSeed(GetComponent<SeedInputHandler>().seedBox.text);
     print("SEED IS: " + Engine.settings.seed);
     Engine.areaManager.GoToScreen(name);

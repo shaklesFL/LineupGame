@@ -104,11 +104,11 @@ public class SuspectScreen : MonoBehaviour
   {
     if (win)
     {
-      resultText.text = "<color=green>YOU GOT THE KILLER!</color>";
+      resultText.text = "<color=green>YOU GOT THE KILLER! YOU WIN!</color>";
     }
     else
     {
-      resultText.text = "<color=red>THE KILLER ROAMS FREE!</color>";
+      resultText.text = "<color=red>THE KILLER ROAMS FREE! YOU LOSE!</color>";
     }
   }
 

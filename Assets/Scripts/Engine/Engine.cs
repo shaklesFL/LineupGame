@@ -16,13 +16,15 @@ public enum BodyFeatures // your custom enumeration
 
 public class Engine : MonoBehaviour
 {
-
+  public static AudioManager audioManager;
   public static Settings settings;
   public static AreaIndex areaManager;
   public static WitnessHandler witnessManager;
   public static Case caseManager;
   public static Camera mainCamera;
 
+  [SerializeField]
+  private AudioManager audioEntity;
   [SerializeField]
   private Settings settingsEntity;
   [SerializeField]
@@ -34,6 +36,7 @@ public class Engine : MonoBehaviour
 
   private void Start()
   {
+    audioManager = audioEntity;
     settings = settingsEntity;
     caseManager = caseManagerEntity;
 
@@ -45,12 +48,12 @@ public class Engine : MonoBehaviour
     mainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
   }
 
-  private void Update()
+  /*private void Update()
   {
     if(Input.GetKeyDown(KeyCode.L))
     {
       areaManager.GoToScreen("Suspects");
     }
-  }
+  }*/
 
 }
