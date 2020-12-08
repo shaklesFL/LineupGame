@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.SceneManagement; 
 using UnityEngine;
+using System.IO;
 
 public class ButtonHandler : MonoBehaviour
 {
@@ -14,6 +15,21 @@ public class ButtonHandler : MonoBehaviour
       Engine.witnessManager._witnessList[Engine.witnessManager.currentWitnessId].moveCharacterTo(_witnessSlot.transform.position, _witnessSlot.transform.localScale);
     }
   }
+
+  public void TakeScreenShot() 
+  {
+        Debug.Log("screenshot taken");
+
+        string folderPath = Directory.GetCurrentDirectory() + "/Screenshots/";
+        //string folderPath = Application.dataPath;
+
+        if (!System.IO.Directory.Exists(folderPath))
+            System.IO.Directory.CreateDirectory(folderPath);
+
+        var screenshotName = "Screenshot.png";
+        ScreenCapture.CaptureScreenshot(System.IO.Path.Combine(folderPath, screenshotName));
+        Debug.Log(folderPath + screenshotName);
+    }
 
   public void NextScreen()
   {
