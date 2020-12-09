@@ -21,6 +21,7 @@ public class Draw : MonoBehaviour
     public Material yellow;
     public Material pink;
     public Material white;
+    public Material brown;
 
     LineRenderer currentLineRenderer;
 
@@ -38,6 +39,7 @@ public class Draw : MonoBehaviour
     public Color32 yellow_ind = new Color32(255, 255, 0, 255);
     public Color32 pink_ind = new Color32(255, 0, 255, 255);
     public Color32 grey_ind = new Color32(230, 230, 230, 255);
+    public Color32 brown_ind = new Color32(152, 118, 84, 255);
 
     private void Start()
     {
@@ -156,6 +158,12 @@ public class Draw : MonoBehaviour
         brush_indicator.GetComponent<Image>().color = grey_ind;
     }
 
+    public void ChangeBrown()
+    {
+        selected_colour = 8;
+        brush_indicator.GetComponent<Image>().color = brown_ind;
+    }
+
     public void ChooseColour(int colour)
     {
         switch (colour)
@@ -192,6 +200,13 @@ public class Draw : MonoBehaviour
                 currentLineRenderer.material = white;
                 currentLineRenderer.sortingOrder = sorting_order;
                 //LineRenderer.Reset()
+
+                break;
+
+            case 8:
+                currentLineRenderer.material = brown;
+                currentLineRenderer.sortingOrder = sorting_order;
+               
 
                 break;
         }
