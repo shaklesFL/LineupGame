@@ -208,8 +208,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -148}
-  m_SizeDelta: {x: 400, y: 50}
+  m_AnchoredPosition: {x: 0, y: -125}
+  m_SizeDelta: {x: 481.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8699499367460686534
 CanvasRenderer:
@@ -239,8 +239,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Choosing the same ID will make it so that both of your killers are the
-    same!
+  m_text: Choosing the same ID will make it so that both of your lineups and killers
+    will be the same!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f5d76a528d282b945b9e68e6cfb02cbe, type: 2}
   m_sharedMaterial: {fileID: 8467520787378183542, guid: f5d76a528d282b945b9e68e6cfb02cbe, type: 2}
@@ -267,8 +267,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

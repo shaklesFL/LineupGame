@@ -68,5 +68,8 @@ MonoBehaviour:
   - _areaObject: {fileID: 7503308537176388438, guid: bf7df17119e658349bec986704c93893, type: 3}
     _areaName: Answer
     _isActive: 0
+  - _areaObject: {fileID: 2704223353809171352, guid: 44d115dc9ebf55447b0f839425858f0a, type: 3}
+    _areaName: Initial
+    _isActive: 0
   lastScreen: -1
-  _currentIndex: 0
+  _currentIndex: 8

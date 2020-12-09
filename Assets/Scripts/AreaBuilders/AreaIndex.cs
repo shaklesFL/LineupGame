@@ -24,7 +24,7 @@ public class AreaIndex : MonoBehaviour
     {
       areaList.Add(_areas[i].areaName, i);
     }
-    GoToScreenIndex(0);
+    GoToScreenIndex(_currentIndex);
   }
 
   public void Update()
