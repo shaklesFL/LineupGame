@@ -1165,19 +1165,19 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: select
     clip: {fileID: 8300000, guid: 516bbabe65bec704eb2e2899468c4bae, type: 3}
-    volume: 1
+    volume: 0.529
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: alien1
     clip: {fileID: 8300000, guid: 731e58dd7d045a442be33a946e2a9fce, type: 3}
-    volume: 0.182
+    volume: 0.226
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: alien2
     clip: {fileID: 8300000, guid: 6449df1f6cf226142ac3142d6497887b, type: 3}
-    volume: 0.603
+    volume: 0.519
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -1317,7 +1317,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.4
+  m_Value: 0.1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

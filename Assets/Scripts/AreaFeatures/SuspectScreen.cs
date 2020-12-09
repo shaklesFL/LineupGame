@@ -43,12 +43,18 @@ public class SuspectScreen : MonoBehaviour
     }
 
 
-    suspectObjects[Engine.caseManager.killerId].gameObject.GetComponentInChildren<CharacterManager>().isKiller = true;
-
     resultText.text = "";
     for (int i = 0; i < suspectNames.Length; i++)
     {
       suspectNames[i].text = Engine.caseManager.suspectNames[i];
+      if (i == Engine.caseManager.killerId)
+      {
+        suspectObjects[i].gameObject.GetComponentInChildren<CharacterManager>().isKiller = true;
+      }
+      else
+      {
+        suspectObjects[i].gameObject.GetComponentInChildren<CharacterManager>().isSuspect = true;
+      }
     }
     notSelectedSuspects = new int[4];
     anticipCounter = _anticipationTime;

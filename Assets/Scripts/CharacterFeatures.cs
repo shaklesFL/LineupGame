@@ -8,9 +8,30 @@ public class CharacterFeatures
   new Dictionary<int, BodyPartElements>();
 
   private bool isKiller=false;
+  private bool isSuspect = false;
+
+  private List<string> innocentSims = new List<string>();
+  private List<string> chosenSims = new List<string>();
 
   public void InitFeatures(CharacterReferences obj)
   {
+    if (isSuspect)
+    {
+      // If innocent, create list of features to pick to be the killer's features, for similarity
+      innocentSims = new List<string>();
+      for (int i = 0; i < Engine.witnessManager.elementList.elements.Length; i++)
+      {
+        innocentSims.Add(Engine.witnessManager.elementList.elements[i].refName);
+      }
+
+      for (int i = 0; i < 3; i++)
+      {
+        int removeIndex = Random.Range(0, innocentSims.Count);
+        chosenSims.Add(innocentSims[removeIndex]);
+        innocentSims.RemoveAt(removeIndex);
+      }
+    }
+
     // Cycle through all body parts
     for (int i = 0; i < obj._bodyParts.Length; i++)
     {
@@ -31,6 +52,11 @@ public class CharacterFeatures
           typeId = Random.Range(0, Engine.witnessManager.elementList.elements[j].types.Length);
 
           if (isKiller)
+          {
+            typeId = Engine.caseManager.elementAnswers[Engine.witnessManager.elementList.elements[j].refName];
+          }
+
+          if (isSuspect && chosenSims.Contains(Engine.witnessManager.elementList.elements[j].refName))       
           {
             typeId = Engine.caseManager.elementAnswers[Engine.witnessManager.elementList.elements[j].refName];
           }
@@ -64,6 +90,11 @@ public class CharacterFeatures
   public void SetAsKiller()
   {
     isKiller = true;
+  }
+
+  public void SetAsInnocent()
+  {
+    isSuspect = true;
   }
 
   /*public Sprite GetFeatureImage(string refName)

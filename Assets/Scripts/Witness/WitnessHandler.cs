@@ -112,7 +112,7 @@ public class WitnessHandler : MonoBehaviour
         int typeIndex = 0;
 
         // Only gives full correct answer if there's only been less than 2 correct so far
-        if (Random.Range(0, 100) <= chanceOfTruth && trueCount<=1)
+        if (Random.Range(0, 100) <= chanceOfTruth && trueCount<=0)
         {
           typeIndex = Engine.caseManager.elementAnswers[el.refName];
         }

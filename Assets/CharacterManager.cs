@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour
 
   public CharacterReferences _bodyParts;
   public bool isKiller = false;
+  public bool isSuspect = false;
   public int killerPosition = -1;
 
   public bool isMoving = false;
@@ -36,6 +37,11 @@ public class CharacterManager : MonoBehaviour
       visualFeatures.SetAsKiller();
       //Engine.caseManager.killerId = killerPosition;
     }
+    if (isSuspect)
+    {
+      visualFeatures.SetAsInnocent();
+    }
+
     visualFeatures.InitFeatures(_bodyParts);
     //_bodyParts.InitReferences();
     AttachBodyParts();
